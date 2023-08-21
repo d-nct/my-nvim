@@ -207,6 +207,7 @@ local default_plugins = {
     config = function()
       require("Comment").setup()
     end,
+    lazy = false,
   },
 
   -- file managing , picker etc
@@ -259,7 +260,21 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
+
+
+    -- Documentação automática
+    {
+        "danymat/neogen",
+        dependencies = "nvim-treesitter/nvim-treesitter",
+        config = true,
+        -- Uncomment next line if you want to follow only stable versions
+        version = "*",
+        lazy = false,
+    },
+
 }
+
+
 
 local config = require("core.utils").load_config()
 

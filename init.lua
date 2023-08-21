@@ -19,3 +19,6 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+-- Remaps
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
